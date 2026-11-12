@@ -1,0 +1,13 @@
+{
+  "id": "pos-090-anchor-match",
+  "class": "anchor",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": "present"
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

@@ -1,0 +1,13 @@
+{
+  "id": "neg-env-missing-sig",
+  "class": "envelope",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "ENVELOPE_SHAPE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

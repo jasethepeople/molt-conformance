@@ -1,0 +1,13 @@
+{
+  "id": "neg-013-hash-omits-prev",
+  "class": "camp1",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "HASH_MISMATCH",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

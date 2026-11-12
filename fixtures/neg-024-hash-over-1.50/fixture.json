@@ -1,0 +1,13 @@
+{
+  "id": "neg-024-hash-over-1.50",
+  "class": "canon-A",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "HASH_MISMATCH",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

@@ -1,0 +1,13 @@
+{
+  "id": "neg-076-ledger-size",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "LEDGER_SIZE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

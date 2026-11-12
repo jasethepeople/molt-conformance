@@ -1,0 +1,13 @@
+{
+  "id": "neg-014-sig-over-hex-text",
+  "class": "camp1",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "SIG_INVALID",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

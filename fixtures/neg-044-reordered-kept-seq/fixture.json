@@ -1,0 +1,13 @@
+{
+  "id": "neg-044-reordered-kept-seq",
+  "class": "chain",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "SEQ_NOT_CONTIGUOUS",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

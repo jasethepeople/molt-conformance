@@ -1,0 +1,13 @@
+{
+  "id": "pos-040-chain-3",
+  "class": "chain",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

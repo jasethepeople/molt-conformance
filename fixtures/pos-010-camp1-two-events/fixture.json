@@ -1,0 +1,13 @@
+{
+  "id": "pos-010-camp1-two-events",
+  "class": "camp1",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

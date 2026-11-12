@@ -1,0 +1,13 @@
+{
+  "id": "neg-041-broken-link",
+  "class": "chain",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "CHAIN_BROKEN",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

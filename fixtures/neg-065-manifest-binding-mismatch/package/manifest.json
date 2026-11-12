@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "artifact.txt": "50c36cf1d8c226ffde182a689e27ced71a91b53392031fdd5620b4d74d950f15"
+  },
+  "artifact_bytes": {
+    "artifact.txt": 26
+  },
+  "agent_pubkeys": {
+    "alice": "2d6a3be11f639da29631a8822609d3f6a4af17234fb3db365bb47d4b45bd495c"
+  },
+  "ledger_bytes": 450
+}

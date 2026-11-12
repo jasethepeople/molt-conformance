@@ -1,0 +1,13 @@
+{
+  "id": "neg-077-path-escape",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "PATH_ESCAPE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

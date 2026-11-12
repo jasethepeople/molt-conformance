@@ -1,0 +1,13 @@
+{
+  "id": "pending-028-nfc-nfd",
+  "class": "canon-pending",
+  "spec_ref": "",
+  "pending": true,
+  "expect": {
+    "ok": false,
+    "check": null,
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

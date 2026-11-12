@@ -1,0 +1,13 @@
+{
+  "id": "neg-065-manifest-binding-mismatch",
+  "class": "sig",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "PUB_NOT_BOUND",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

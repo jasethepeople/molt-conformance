@@ -1,0 +1,1231 @@
+{
+  "verifier": "node adapters/l1.mjs",
+  "summary": {
+    "total": 62,
+    "scored": 62,
+    "passed": 62,
+    "failed": 0,
+    "pending": 0,
+    "check_coverage_gaps": [
+      "doc-046-reorder-renumbered",
+      "neg-041-broken-link",
+      "neg-045-intermediate-start",
+      "neg-env-hash-uppercase",
+      "neg-env-prev-hash-uppercase",
+      "neg-env-seq-negative",
+      "neg-env-seq-string",
+      "neg-env-sig-length",
+      "neg-env-ts-negative",
+      "pos-000-minimal",
+      "pos-001-payload-forms",
+      "pos-010-camp1-two-events",
+      "pos-020-canonical-sorted",
+      "pos-040-chain-3",
+      "pos-060-valid",
+      "pos-064-two-agents",
+      "pos-070-valid",
+      "pos-090-anchor-match",
+      "pos-092-anchor-absent"
+    ],
+    "verdict": "CONFORMANT"
+  },
+  "results": [
+    {
+      "id": "doc-046-reorder-renumbered",
+      "class": "doc",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-011-camp2-full",
+      "class": "camp1",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-012-camp2-sig-only",
+      "class": "camp1",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SIG_INVALID",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad signature",
+        "anchor": "none",
+        "check": "SIG_INVALID"
+      }
+    },
+    {
+      "id": "neg-013-hash-omits-prev",
+      "class": "camp1",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-014-sig-over-hex-text",
+      "class": "camp1",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SIG_INVALID",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad signature",
+        "anchor": "none",
+        "check": "SIG_INVALID"
+      }
+    },
+    {
+      "id": "neg-021-hash-over-insertion-order",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-022-hash-over-whitespace",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-023-hash-over-1e2",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-024-hash-over-1.50",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-025-hash-over-unicode-escape",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-026-hash-over-solidus-escape",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-027-hash-over-nested-order",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "HASH_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "hash mismatch",
+        "anchor": "none",
+        "check": "HASH_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-041-broken-link",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "CHAIN_BROKEN",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "chain broken",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-042-truncated-midline",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "LEDGER_PARSE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "events.jsonl is truncated: final line has no newline.",
+        "anchor": "none",
+        "check": "LEDGER_PARSE"
+      }
+    },
+    {
+      "id": "neg-043-anchor-tail",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ANCHOR_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Anchored event sequence is not present.",
+        "anchor": "none",
+        "check": "ANCHOR_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-044-reordered-kept-seq",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SEQ_NOT_CONTIGUOUS",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "seq out of order",
+        "anchor": "none",
+        "check": "SEQ_NOT_CONTIGUOUS"
+      }
+    },
+    {
+      "id": "neg-045-intermediate-start",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "CHAIN_BROKEN",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "chain broken",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-051-line-key-order",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-052-line-whitespace",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-053-line-1e2",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-054-line-1.50",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-055-line-unicode-escape",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-056-line-solidus-escape",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-057-line-nested-order",
+      "class": "canon-B",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-061-flipped-byte",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SIG_INVALID",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad signature",
+        "anchor": "none",
+        "check": "SIG_INVALID"
+      }
+    },
+    {
+      "id": "neg-062-wrong-key",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SIG_INVALID",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad signature",
+        "anchor": "none",
+        "check": "SIG_INVALID"
+      }
+    },
+    {
+      "id": "neg-063-pub-unbound",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "PUB_NOT_BOUND",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "actor key not bound",
+        "anchor": "none",
+        "check": "PUB_NOT_BOUND"
+      }
+    },
+    {
+      "id": "neg-065-manifest-binding-mismatch",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "PUB_NOT_BOUND",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "actor key not bound",
+        "anchor": "none",
+        "check": "PUB_NOT_BOUND"
+      }
+    },
+    {
+      "id": "neg-071-missing-ledger-bytes",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "MANIFEST_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest must contain artifacts, artifact_bytes, agent_pubkeys, and ledger_bytes.",
+        "anchor": "none",
+        "check": "MANIFEST_SHAPE"
+      }
+    },
+    {
+      "id": "neg-072-missing-artifacts",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "MANIFEST_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest must contain artifacts, artifact_bytes, agent_pubkeys, and ledger_bytes.",
+        "anchor": "none",
+        "check": "MANIFEST_SHAPE"
+      }
+    },
+    {
+      "id": "neg-073-wrong-type-agent-pubkeys",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "MANIFEST_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest must contain artifacts, artifact_bytes, agent_pubkeys, and ledger_bytes.",
+        "anchor": "none",
+        "check": "MANIFEST_SHAPE"
+      }
+    },
+    {
+      "id": "neg-074-artifact-digest",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ARTIFACT_DIGEST",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Artifact digest mismatch for 'artifact.txt'.",
+        "anchor": "none",
+        "check": "ARTIFACT_DIGEST"
+      }
+    },
+    {
+      "id": "neg-075-artifact-size",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ARTIFACT_SIZE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Artifact byte count mismatch for 'artifact.txt'.",
+        "anchor": "none",
+        "check": "ARTIFACT_SIZE"
+      }
+    },
+    {
+      "id": "neg-076-ledger-size",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "LEDGER_SIZE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "events.jsonl byte count does not match manifest.ledger_bytes.",
+        "anchor": "none",
+        "check": "LEDGER_SIZE"
+      }
+    },
+    {
+      "id": "neg-077-path-escape",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "PATH_ESCAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest contains an unsafe artifact path.",
+        "anchor": "none",
+        "check": "PATH_ESCAPE"
+      }
+    },
+    {
+      "id": "neg-078-absolute-path",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "PATH_ESCAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest contains an unsafe artifact path.",
+        "anchor": "none",
+        "check": "PATH_ESCAPE"
+      }
+    },
+    {
+      "id": "neg-079-symlink-artifact",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SYMLINK_ARTIFACT",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest artifact path traverses a symlink or non-directory.",
+        "anchor": "none",
+        "check": "SYMLINK_ARTIFACT"
+      }
+    },
+    {
+      "id": "neg-080-artifact-missing",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ARTIFACT_MISSING",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "ENOENT: no such file or directory, lstat '/home/hatch/workspace/molt-conformance/fixtures/neg-080-artifact-missing/package/missing.txt'",
+        "anchor": "none",
+        "check": "ARTIFACT_MISSING"
+      }
+    },
+    {
+      "id": "neg-081-manifest-not-json",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "MANIFEST_PARSE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Manifest JSON is invalid or truncated.",
+        "anchor": "none",
+        "check": "MANIFEST_PARSE"
+      }
+    },
+    {
+      "id": "neg-091-anchor-mismatch",
+      "class": "anchor",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ANCHOR_MISMATCH",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "Anchor hash mismatch.",
+        "anchor": "none",
+        "check": "ANCHOR_MISMATCH"
+      }
+    },
+    {
+      "id": "neg-env-extra-field",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "wrong fields",
+        "anchor": "none",
+        "check": "ENVELOPE_SHAPE"
+      }
+    },
+    {
+      "id": "neg-env-hash-uppercase",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "HEX_FORMAT",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-env-missing-actor",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "wrong fields",
+        "anchor": "none",
+        "check": "ENVELOPE_SHAPE"
+      }
+    },
+    {
+      "id": "neg-env-missing-sig",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "wrong fields",
+        "anchor": "none",
+        "check": "ENVELOPE_SHAPE"
+      }
+    },
+    {
+      "id": "neg-env-prev-hash-uppercase",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "HEX_FORMAT",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-env-seq-float",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "CANONICALIZATION",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "not canonical",
+        "anchor": "none",
+        "check": "CANONICALIZATION"
+      }
+    },
+    {
+      "id": "neg-env-seq-gap",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SEQ_NOT_CONTIGUOUS",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "seq out of order",
+        "anchor": "none",
+        "check": "SEQ_NOT_CONTIGUOUS"
+      }
+    },
+    {
+      "id": "neg-env-seq-negative",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-env-seq-not-zero",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [],
+      "expect": {
+        "ok": false,
+        "check": "SEQ_NOT_CONTIGUOUS",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "seq out of order",
+        "anchor": "none",
+        "check": "SEQ_NOT_CONTIGUOUS"
+      }
+    },
+    {
+      "id": "neg-env-seq-string",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-env-sig-length",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "HEX_FORMAT",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "neg-env-ts-negative",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": false,
+        "check": "ENVELOPE_SHAPE",
+        "anchor": null
+      },
+      "got": {
+        "ok": false,
+        "reason": "bad field format",
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-000-minimal",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-001-payload-forms",
+      "class": "envelope",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-010-camp1-two-events",
+      "class": "camp1",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-020-canonical-sorted",
+      "class": "canon-A",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-040-chain-3",
+      "class": "chain",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-060-valid",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-064-two-agents",
+      "class": "sig",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-070-valid",
+      "class": "manifest",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": null
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    },
+    {
+      "id": "pos-090-anchor-match",
+      "class": "anchor",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": "present"
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "present"
+      }
+    },
+    {
+      "id": "pos-092-anchor-absent",
+      "class": "anchor",
+      "pending": false,
+      "status": "MATCH",
+      "detail": "",
+      "unchecked": [
+        "check"
+      ],
+      "expect": {
+        "ok": true,
+        "check": "OK",
+        "anchor": "none"
+      },
+      "got": {
+        "ok": true,
+        "reason": null,
+        "anchor": "none"
+      }
+    }
+  ]
+}

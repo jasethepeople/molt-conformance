@@ -1,0 +1,13 @@
+{
+  "id": "doc-046-reorder-renumbered",
+  "class": "doc",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": null
+  },
+  "written_reason": "Valid package whose ts is non-monotonic. Demonstrates that the spec verification procedure (V-09 sub-steps 1-9) does not check temporal ordering; a reordered-then-renumbered-then-resealed history is indistinguishable from a naturally ordered one. Documented limitation, not a conformance failure.",
+  "notes": ""
+}

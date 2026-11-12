@@ -1,0 +1,13 @@
+{
+  "id": "neg-081-manifest-not-json",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "MANIFEST_PARSE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

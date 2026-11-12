@@ -1,0 +1,13 @@
+{
+  "id": "neg-079-symlink-artifact",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "SYMLINK_ARTIFACT",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

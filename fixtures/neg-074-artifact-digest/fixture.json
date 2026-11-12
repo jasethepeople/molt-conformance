@@ -1,0 +1,13 @@
+{
+  "id": "neg-074-artifact-digest",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "ARTIFACT_DIGEST",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

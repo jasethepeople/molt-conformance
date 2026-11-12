@@ -1,0 +1,13 @@
+{
+  "id": "pos-064-two-agents",
+  "class": "sig",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

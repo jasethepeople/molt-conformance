@@ -1,0 +1,13 @@
+{
+  "id": "neg-042-truncated-midline",
+  "class": "chain",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "LEDGER_PARSE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

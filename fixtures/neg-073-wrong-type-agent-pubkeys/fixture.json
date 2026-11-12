@@ -1,0 +1,13 @@
+{
+  "id": "neg-073-wrong-type-agent-pubkeys",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "MANIFEST_SHAPE",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

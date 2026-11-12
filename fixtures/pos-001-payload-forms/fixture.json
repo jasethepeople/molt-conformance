@@ -1,0 +1,13 @@
+{
+  "id": "pos-001-payload-forms",
+  "class": "envelope",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

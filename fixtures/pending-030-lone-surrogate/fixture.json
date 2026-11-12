@@ -1,0 +1,13 @@
+{
+  "id": "pending-030-lone-surrogate",
+  "class": "canon-pending",
+  "spec_ref": "",
+  "pending": true,
+  "expect": {
+    "ok": false,
+    "check": null,
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

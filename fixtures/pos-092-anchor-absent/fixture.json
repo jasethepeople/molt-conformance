@@ -1,0 +1,13 @@
+{
+  "id": "pos-092-anchor-absent",
+  "class": "anchor",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": true,
+    "check": "OK",
+    "anchor": "none"
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

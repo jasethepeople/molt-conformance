@@ -1,0 +1,13 @@
+{
+  "id": "neg-051-line-key-order",
+  "class": "canon-B",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "CANONICALIZATION",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}

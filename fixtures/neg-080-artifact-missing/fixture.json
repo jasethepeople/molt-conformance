@@ -1,0 +1,13 @@
+{
+  "id": "neg-080-artifact-missing",
+  "class": "manifest",
+  "spec_ref": "",
+  "pending": false,
+  "expect": {
+    "ok": false,
+    "check": "ARTIFACT_MISSING",
+    "anchor": null
+  },
+  "written_reason": "See REPORT.md catalog.",
+  "notes": ""
+}
