@@ -30,13 +30,15 @@ node tools/diff.mjs l1.json foundry.json
 The Foundry adapter imports TypeScript (`independent-verifier.ts`); run it with bun:
 `bun adapters/foundry.mjs`, or pass the bun command to the runner as above.
 
-## Measured results (2026-11-12, Node 24, bun 1.4.4)
+## Measured results (2026-11-12, Node 24, bun 1.4.4; post-F10)
 
 - **L1: CONFORMANT — 62/62 scored fixtures matched.** 19 check-coverage gaps (10 positives by runner design, the rest genuinely ambiguous reasons: `chain broken`, `bad field format`).
-- **Foundry: 51/62 matched.** 11 failures = 10 real divergences + 1 anchor-reporting mismatch.
-- **diff.mjs: agreement 52/62, disagreements 10** (all VERDICT_DISAGREE).
+- **Foundry: 47/62 matched.** 15 failures = 14 real divergences + 1 anchor-reporting mismatch.
+- **diff.mjs: agreement 48/62, disagreements 14** (all VERDICT_DISAGREE).
 
-The 10 divergences: pos-001 (payload type — Foundry stricter), neg-051/052/057 + neg-env-seq-float (line canonicalization — Foundry does not check), neg-071/076 (ledger_bytes — Foundry never reads it), neg-075 (artifact_bytes — Foundry checks digest only), neg-043/091 (anchor — Foundry ignores it). Plus pos-090 anchor-reporting (both pass; Foundry says anchor none, L1 says present). 9 of 10 are Foundry being less strict than the spec; only pos-001 is Foundry being more strict.
+The 14 divergences: pos-001 (payload type — Foundry stricter), neg-051/052/053/054/055/056/057 + neg-env-seq-float (line canonicalization — Foundry does not check), neg-071/076 (ledger_bytes — Foundry never reads it), neg-075 (artifact_bytes — Foundry checks digest only), neg-043/091 (anchor — Foundry ignores it). Plus pos-090 anchor-reporting (both pass; Foundry says anchor none, L1 says present). 13 of 14 are Foundry being less strict than the spec; only pos-001 is Foundry being more strict.
+
+F10 (2026-11-12) rebuilt Set B neg-053–056 with object payloads so they isolate the canonicalization divergence from the payload-type divergence. Pre-F10 the diff was 10 and Foundry 51/62; the four newly-isolated D2 rows took it to 14 and 47/62. The four are findings, not regressions.
 
 See `REPORT.md` for the full measured differential, the prediction-vs-measurement corrections, and the findings.
 

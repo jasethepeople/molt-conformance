@@ -23,32 +23,43 @@ Environment: Node 24, bun 1.4.4. Command sequence:
     node runner.mjs --verifier "node adapters/foundry.mjs" --json foundry.json
     node tools/diff.mjs l1.json foundry.json
 
-### Headline (post-fix)
+### Headline (post-fix, post-F10)
 - L1: CONFORMANT — 62/62 scored fixtures matched.
-- Foundry: 51/62 matched. 11 failures = 10 real divergences + 1 anchor-reporting mismatch.
-- diff.mjs: agreement 52/62, disagreements 10 (all VERDICT_DISAGREE).
+- Foundry: 47/62 matched. 15 failures = 14 real divergences + 1 anchor-reporting mismatch.
+- diff.mjs: agreement 48/62, disagreements 14 (all VERDICT_DISAGREE).
 - 3 pending (non-ASCII) excluded from scoring.
 
-### The 10 real divergences (L1 vs Foundry, observed)
+### The 14 real divergences (L1 vs Foundry, observed)
 | # | Fixture | L1 | Foundry | Cause |
 |---|---------|-----|---------|-------|
 | 1 | pos-001-payload-forms | PASS | FAIL "Event payload is invalid." | D1 |
 | 2 | neg-051-line-key-order | FAIL CANONICALIZATION | PASS | D2 |
 | 3 | neg-052-line-whitespace | FAIL CANONICALIZATION | PASS | D2 |
-| 4 | neg-057-line-nested-order | FAIL CANONICALIZATION | PASS | D2 |
-| 5 | neg-env-seq-float | FAIL CANONICALIZATION | PASS | D2 |
-| 6 | neg-071-missing-ledger-bytes | FAIL MANIFEST_SHAPE | PASS | D3 |
-| 7 | neg-076-ledger-size | FAIL LEDGER_SIZE | PASS | D3 |
-| 8 | neg-075-artifact-size | FAIL ARTIFACT_SIZE | PASS | D4 |
-| 9 | neg-043-anchor-tail | FAIL ANCHOR_MISMATCH | PASS | D5 |
-| 10 | neg-091-anchor-mismatch | FAIL ANCHOR_MISMATCH | PASS | D5 |
+| 4 | neg-053-line-1e2 | FAIL CANONICALIZATION | PASS | D2 (F10) |
+| 5 | neg-054-line-1.50 | FAIL CANONICALIZATION | PASS | D2 (F10) |
+| 6 | neg-055-line-unicode-escape | FAIL CANONICALIZATION | PASS | D2 (F10) |
+| 7 | neg-056-line-solidus-escape | FAIL CANONICALIZATION | PASS | D2 (F10) |
+| 8 | neg-057-line-nested-order | FAIL CANONICALIZATION | PASS | D2 |
+| 9 | neg-env-seq-float | FAIL CANONICALIZATION | PASS | D2 |
+| 10 | neg-071-missing-ledger-bytes | FAIL MANIFEST_SHAPE | PASS | D3 |
+| 11 | neg-076-ledger-size | FAIL LEDGER_SIZE | PASS | D3 |
+| 12 | neg-075-artifact-size | FAIL ARTIFACT_SIZE | PASS | D4 |
+| 13 | neg-043-anchor-tail | FAIL ANCHOR_MISMATCH | PASS | D5 |
+| 14 | neg-091-anchor-mismatch | FAIL ANCHOR_MISMATCH | PASS | D5 |
 
 Plus 1 anchor-reporting mismatch (not a verdict disagreement): pos-090-
 anchor-match — both PASS, Foundry reports anchoring `local-only`
 (adapter → none), L1 reports `verified` (adapter → present).
 
-Direction: 9 of 10 are Foundry being LESS strict than the spec (it accepts
+Direction: 13 of 14 are Foundry being LESS strict than the spec (it accepts
 packages the spec rejects). Only pos-001 is Foundry being MORE strict.
+
+F10 (2026-11-12): Set B neg-053–056 rebuilt with object payloads
+(`{n:100}`, `{n:1.5}`, `{s:"A"}`, `{s:"/"}`) so they isolate the
+canonicalization divergence (D2) from the payload-type divergence (D1).
+Pre-F10 the diff was 10 and Foundry 51/62; the four newly-isolated D2 rows
+took it to 14 and 47/62. The four are findings, not regressions — Foundry
+was already wrong about them, the old fixtures just could not show it.
 
 ### Pre-fix measurement (for the record)
 Before the fixture fixes, L1 was 60/62 and Foundry 49/62. The 2 misses on

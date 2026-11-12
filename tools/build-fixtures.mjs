@@ -217,10 +217,14 @@ for (const [id, key] of [
 const line = {
   insertion: f => JSON.stringify({ seq: f.seq, ts: f.ts, type: f.type, actor: f.actor, payload: f.payload, prev_hash: f.prev_hash, pub: f.pub, sig: f.sig, hash: f.hash }),
   whitespace: f => canonical(f).replace(/:/g, ': ').replace(/,/g, ', '),
-  oneE2: f => canonical(f).replace('"payload":100', '"payload":1e2'),
-  oneFiveZero: f => canonical(f).replace('"payload":1.5', '"payload":1.50'),
-  unicode: f => canonical(f).replace('"payload":"A"', '"payload":"\\u0041"'),
-  solidus: f => canonical(f).replace('"payload":"/"', '"payload":"\\/"'),
+
+  // F10 — object payloads so Foundry's payload-type check (D1) does not
+  // fire before its (missing) canonicalization check (D2) is exercised.
+  oneE2:       f => canonical(f).replace('"payload":{"n":100}', '"payload":{"n":1e2}'),
+  oneFiveZero: f => canonical(f).replace('"payload":{"n":1.5}', '"payload":{"n":1.50}'),
+  unicode:     f => canonical(f).replace('"payload":{"s":"A"}', '"payload":{"s":"\\u0041"}'),
+  solidus:     f => canonical(f).replace('"payload":{"s":"/"}', '"payload":{"s":"\\/"}'),
+
   nested: f => canonical(f).replace('"payload":{"a":1,"b":2}', '"payload":{"b":2,"a":1}')
 };
 for (const [id, key] of [
@@ -234,11 +238,11 @@ for (const [id, key] of [
 ]) {
   add(id, 'canon-B', { ok: false, check: 'CANONICALIZATION' }, () => {
     const payload =
-      key === 'oneE2' ? 100 :
-      key === 'oneFiveZero' ? 1.5 :
-      key === 'unicode' ? 'A' :
-      key === 'solidus' ? '/' :
-      key === 'nested' ? { a: 1, b: 2 } : { i: 0 };
+      key === 'oneE2'       ? { n: 100 } :
+      key === 'oneFiveZero' ? { n: 1.5 } :
+      key === 'unicode'     ? { s: 'A' } :
+      key === 'solidus'     ? { s: '/' } :
+      key === 'nested'      ? { a: 1, b: 2 } : { i: 0 };
     return { events: [{ seq: 0, ts: 1700000000, type: 'conformance.event', payload, actor: 'alice' }],
              lineFormat: line[key] };
   });

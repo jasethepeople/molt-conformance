@@ -3,8 +3,8 @@
   "summary": {
     "total": 62,
     "scored": 62,
-    "passed": 51,
-    "failed": 11,
+    "passed": 47,
+    "failed": 15,
     "pending": 0,
     "check_coverage_gaps": [
       "doc-046-reorder-renumbered",
@@ -23,10 +23,6 @@
       "neg-042-truncated-midline",
       "neg-044-reordered-kept-seq",
       "neg-045-intermediate-start",
-      "neg-053-line-1e2",
-      "neg-054-line-1.50",
-      "neg-055-line-unicode-escape",
-      "neg-056-line-solidus-escape",
       "neg-061-flipped-byte",
       "neg-062-wrong-key",
       "neg-063-pub-unbound",
@@ -440,19 +436,17 @@
       "id": "neg-053-line-1e2",
       "class": "canon-B",
       "pending": false,
-      "status": "MATCH",
-      "detail": "",
-      "unchecked": [
-        "check"
-      ],
+      "status": "MISMATCH_VERDICT",
+      "detail": "expected ok=false, got ok=true",
+      "unchecked": [],
       "expect": {
         "ok": false,
         "check": "CANONICALIZATION",
         "anchor": null
       },
       "got": {
-        "ok": false,
-        "reason": "Event payload is invalid.",
+        "ok": true,
+        "reason": null,
         "anchor": "none"
       }
     },
@@ -460,19 +454,17 @@
       "id": "neg-054-line-1.50",
       "class": "canon-B",
       "pending": false,
-      "status": "MATCH",
-      "detail": "",
-      "unchecked": [
-        "check"
-      ],
+      "status": "MISMATCH_VERDICT",
+      "detail": "expected ok=false, got ok=true",
+      "unchecked": [],
       "expect": {
         "ok": false,
         "check": "CANONICALIZATION",
         "anchor": null
       },
       "got": {
-        "ok": false,
-        "reason": "Event payload is invalid.",
+        "ok": true,
+        "reason": null,
         "anchor": "none"
       }
     },
@@ -480,19 +472,17 @@
       "id": "neg-055-line-unicode-escape",
       "class": "canon-B",
       "pending": false,
-      "status": "MATCH",
-      "detail": "",
-      "unchecked": [
-        "check"
-      ],
+      "status": "MISMATCH_VERDICT",
+      "detail": "expected ok=false, got ok=true",
+      "unchecked": [],
       "expect": {
         "ok": false,
         "check": "CANONICALIZATION",
         "anchor": null
       },
       "got": {
-        "ok": false,
-        "reason": "Event payload is invalid.",
+        "ok": true,
+        "reason": null,
         "anchor": "none"
       }
     },
@@ -500,19 +490,17 @@
       "id": "neg-056-line-solidus-escape",
       "class": "canon-B",
       "pending": false,
-      "status": "MATCH",
-      "detail": "",
-      "unchecked": [
-        "check"
-      ],
+      "status": "MISMATCH_VERDICT",
+      "detail": "expected ok=false, got ok=true",
+      "unchecked": [],
       "expect": {
         "ok": false,
         "check": "CANONICALIZATION",
         "anchor": null
       },
       "got": {
-        "ok": false,
-        "reason": "Event payload is invalid.",
+        "ok": true,
+        "reason": null,
         "anchor": "none"
       }
     },
